@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1581</width>
+    <height>934</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">background-color: #0f0f1e;</string>
+   </property>
+   <widget class="QGroupBox" name="Input">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>80</y>
+      <width>641</width>
+      <height>211</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QGroupBox {
+  background-color: #1a1a2e;
+  border: 1px solid #2a2a5a;
+  border-radius: 10px;
+  margin-top: 14px;
+  color: #7eb8f7;
+  font-weight: bold;
+}
+QGroupBox::title {
+  subcontrol-origin: margin;
+  subcontrol-position: top left;
+  padding: 0 8px;
+  color: #7eb8f7;
+  
+}</string>
+    </property>
+    <property name="title">
+     <string>Input</string>
+    </property>
+    <widget class="QLineEdit" name="inputlineEdit">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>30</y>
+       <width>601</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit {
+  background-color: #16213e;
+  border: 2px solid #2a2a5a;
+  border-radius: 7px;
+  padding: 6px 12px;
+  color: #e0e0e0;
+  font-size: 16px;
+}
+QLineEdit:focus {
+  border: 2px solid #7eb8f7;
+}</string>
+     </property>
+     <property name="placeholderText">
+      <string>Enter expression here...</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>85</y>
+       <width>281</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+  background-color: #1d4ed8;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  font-weight: bold;
+}
+QPushButton:hover { background-color: #2563eb; }</string>
+     </property>
+     <property name="text">
+      <string>Infix to Postfix</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_2">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>85</y>
+       <width>281</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+  background-color: #1d4ed8;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  font-weight: bold;
+}
+QPushButton:hover { background-color: #2563eb; }</string>
+     </property>
+     <property name="text">
+      <string>Infix to Prefix</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_3">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>125</y>
+       <width>281</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+  background-color: #065f46;
+  color: #6ee7b7;
+  border: none;
+  border-radius: 7px;
+  font-weight: bold;
+}
+QPushButton:hover { background-color: #059669; color: white; }</string>
+     </property>
+     <property name="text">
+      <string>Postfix to Infix</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_4">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>125</y>
+       <width>281</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+  background-color: #065f46;
+  color: #6ee7b7;
+  border: none;
+  border-radius: 7px;
+  font-weight: bold;
+}
+QPushButton:hover { background-color: #059669; color: white; }</string>
+     </property>
+     <property name="text">
+      <string>Prefix to Infix</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_5">
+     <property name="geometry">
+      <rect>
+       <x>280</x>
+       <y>170</y>
+       <width>75</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+  background-color: #374151;
+  color: #d1d5db;
+  border: none;
+  border-radius: 7px;
+  font-weight: bold;
+}
+QPushButton:hover { background-color: #4b5563; }</string>
+     </property>
+     <property name="text">
+      <string>Clear</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="Result">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>310</y>
+      <width>641</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QGroupBox {
+  background-color: #1a1a2e;
+  border: 1px solid #2a2a5a;
+  border-radius: 10px;
+  margin-top: 14px;
+  color: #7eb8f7;
+  font-weight: bold;
+}
+QGroupBox::title {
+  subcontrol-origin: margin;
+  subcontrol-position: top left;
+  padding: 0 8px;
+  color: #7eb8f7;
+}</string>
+    </property>
+    <property name="title">
+     <string>Result</string>
+    </property>
+    <widget class="QLabel" name="outputTypeLabel">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>27</y>
+       <width>601</width>
+       <height>29</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: #55cc88;
+font-weight: bold;
+font-size: 15px;
+border-radius: 7px;
+padding-left: 10px;
+padding-top: 5px;
+padding-bottom: 5px;</string>
+     </property>
+     <property name="text">
+      <string>outputTypeLabel</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignmentFlag::AlignJustify|Qt::AlignmentFlag::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="outputValueLabel">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>60</y>
+       <width>601</width>
+       <height>29</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: #7eb8f7;
+font-family: 'Courier New', monospace;
+font-size: 15px;
+border-radius: 7px;
+padding-left: 10px;
+padding-top: 5px;
+padding-bottom: 5px;</string>
+     </property>
+     <property name="text">
+      <string>outputValueLabel</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignmentFlag::AlignJustify|Qt::AlignmentFlag::AlignVCenter</set>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="History">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>430</y>
+      <width>641</width>
+      <height>271</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QGroupBox {
+  background-color: #1a1a2e;
+  border: 1px solid #2a2a5a;
+  border-radius: 10px;
+  margin-top: 14px;
+  color: #7eb8f7;
+  font-weight: bold;
+}
+QGroupBox::title {
+  subcontrol-origin: margin;
+  subcontrol-position: top left;
+  padding: 0 8px;
+  color: #7eb8f7;
+}</string>
+    </property>
+    <property name="title">
+     <string>History</string>
+    </property>
+    <widget class="QLabel" name="historySizeLabel">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>70</y>
+       <width>601</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: #55cc88;
+font-size: 13px;
+border-radius: 7px;
+padding-left: 10px;
+padding-top: 5px;
+padding-bottom: 5px;</string>
+     </property>
+     <property name="text">
+      <string>TextLabel</string>
+     </property>
+    </widget>
+    <widget class="QTextEdit" name="historyTextEdit">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>110</y>
+       <width>601</width>
+       <height>151</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QTextEdit {
+  background-color: #0f0f1e;
+  border: 1px solid #2a2a4a;
+  border-radius: 7px;
+  color: #a0a0cc;
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+}</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_6">
+     <property name="geometry">
+      <rect>
+       <x>470</x>
+       <y>30</y>
+       <width>151</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+  background-color: #7f1d1d;
+  color: #fca5a5;
+  border: none;
+  border-radius: 7px;
+  font-weight: bold;
+}
+QPushButton:hover { background-color: #991b1b; }</string>
+     </property>
+     <property name="text">
+      <string>Clear History</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>25</y>
+      <width>641</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font-size: 24px; font-weight: bold; color: #7eb8f7;</string>
+    </property>
+    <property name="text">
+     <string>Expression Converter</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignmentFlag::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="algorithmTextEdit">
+    <property name="geometry">
+     <rect>
+      <x>800</x>
+      <y>80</y>
+      <width>541</width>
+      <height>621</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>470</width>
+      <height>0</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QTextEdit {
+  background-color: #0f0f1e;
+  border: 1px solid #2a2a4a;
+  border-radius: 7px;
+  color: #a0a0cc;
+  padding: 12px;
+}</string>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
