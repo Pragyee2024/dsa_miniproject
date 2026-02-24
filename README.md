@@ -19,6 +19,7 @@ This tool converts mathematical expressions between **Infix, Postfix, and Prefix
 
 ## Repository Structure
 - `/` : Contains `.cpp`, `.h`, and `.ui` source files.
+- `/screenshots`: UI previews.
 - `ExpressionCalculator.pro`: Qt Project configuration.
 - `ProjectReport_Pragyee_10.pdf`: Comprehensive project documentation and system design.
 
